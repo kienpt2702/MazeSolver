@@ -1,5 +1,7 @@
+import java.util.Scanner;
+
 //=================================================
-// YOUR NAME GOES HERE
+// Kien Trung Pham
 // Which project is this?
 // Due Date
 //
@@ -33,24 +35,46 @@ class Point{
 
 
     // getX method
+    public int getX() {
+        return x;
+    }
 
 
     // getY method
+    public int getY() {
+        return y;
+    }
 
 
     // setX method
+    public void setX(int x) {
+        this.x = x;
+    }
 
 
     // setY method
 
+    public void setY(int y) {
+        this.y = y;
+    }
+
 
     // isEqual method
-
+    public boolean isEqual(Point other) {
+        return this.x == other.x && this.y == other.y;
+    }
 
     // read method
+    public static Point read() {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
 
+        return new Point(x,y);
+    }
 
     // print method
-
-
+    public void print() {
+        System.out.println("(" + x + ", " + y + ")");
+    }
 }
