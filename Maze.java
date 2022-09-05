@@ -100,6 +100,7 @@ class Maze{
         findPath(new Point(col, row-1), end);
         findPath(new Point(col-1, row), end);
         maze[row][col] = '.';
+        count = (count+25) % 26;
     }
 
     public void find() {

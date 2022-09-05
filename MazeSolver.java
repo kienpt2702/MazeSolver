@@ -25,6 +25,5 @@ class MazeSolver{
         for(Maze maze: list) {
             maze.find();
         }
-        System.out.println("Game Over");
     }
 }
