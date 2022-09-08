@@ -22,7 +22,7 @@ class Maze{
 
     // default constructor
     Maze(){
-
+        initialize();
     }
 
 
@@ -38,21 +38,27 @@ class Maze{
         maze = null;
         r = 0;
         c = 0;
+        start = null;
+        end = null;
     }
 
     // read method
     public void read(Scanner sc) {
-        sc.nextLine();
-        String[] size = sc.nextLine().trim().split(" ");
-        r = Integer.parseInt(size[0]);
-        c = Integer.parseInt(size[1]);
-
+//        sc.nextLine();
+//        String[] size = sc.nextLine().trim().split(" ");
+//        r = Integer.parseInt(size[0]);
+//        c = Integer.parseInt(size[1]);
+        r = sc.nextInt();
+        c = sc.nextInt();
         maze = new char[r][c];
 
-        String[] position = sc.nextLine().trim().split(" ");
-        // need to check how to use read method of Point
-        start = new Point(Integer.parseInt(position[0])-1, Integer.parseInt(position[1])-1);
-        end = new Point(Integer.parseInt(position[2])-1, Integer.parseInt(position[3])-1);
+//        String[] position = sc.nextLine().trim().split(" ");
+//        start = new Point(Integer.parseInt(position[0])-1, Integer.parseInt(position[1])-1);
+//        end = new Point(Integer.parseInt(position[2])-1, Integer.parseInt(position[3])-1);
+
+        start = Point.read(sc);
+        end = Point.read(sc);
+        sc.nextLine();
 
         for(int row = 0; row < r; row++) {
             String line = sc.nextLine();
@@ -91,7 +97,6 @@ class Maze{
         maze[row][col] = alphabet.charAt(count++ % 26);
         if(start.isEqual(end)) {
             solved = true;
-            print();
             return;
         }
         // not find yet => need to solve
@@ -99,13 +104,38 @@ class Maze{
         findPath(new Point(col+1, row), end);
         findPath(new Point(col, row-1), end);
         findPath(new Point(col-1, row), end);
-        maze[row][col] = '.';
-        count = (count+25) % 26;
+
+        if(!solved){
+            maze[row][col] = '.';
+            count = (count+25) % 26;
+        }
     }
+//    public boolean findPath(Point start, Point end) {
+//        if(solved) return true;
+//        int col = start.getX();
+//        int row = start.getY();
+//
+//        if(col < 0 || col >= c || row < 0 || row >= r || maze[row][col] != '.') return false;
+//
+//        maze[row][col] = alphabet.charAt(count++ % 26);
+//        if(start.isEqual(end)) {
+//            //print();
+//            return true;
+//        }
+//        // not find yet => need to solve
+//        boolean down = findPath(new Point(col, row+1), end);
+//        boolean left = findPath(new Point(col+1, row), end);
+//        boolean up = findPath(new Point(col, row-1), end);
+//        boolean right = findPath(new Point(col-1, row), end);
+//        maze[row][col] = '.';
+//        count = (count+25) % 26;
+//        return down || left || up || right;
+//    }
 
     public void find() {
         findPath(start, end);
         if(!solved) System.out.println("NO PATH EXISTS");
+        else print();
         System.out.println();
     }
 }

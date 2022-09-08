@@ -65,10 +65,9 @@ class Point{
     }
 
     // read method
-    public static Point read() {
-        Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        int y = sc.nextInt();
+    public static Point read(Scanner sc) {
+        int x = sc.nextInt()-1;
+        int y = sc.nextInt()-1;
 
         return new Point(x,y);
     }

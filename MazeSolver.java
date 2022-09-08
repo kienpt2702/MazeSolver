@@ -14,7 +14,6 @@ class MazeSolver{
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         int total = sc.nextInt();
-        sc.nextLine();
 
         ArrayList<Maze> list = new ArrayList<>();
         for(int i = 0; i < total; i++) {
