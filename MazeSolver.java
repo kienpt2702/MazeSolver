@@ -22,7 +22,8 @@ class MazeSolver{
             list.add(maze);
         }
         for(Maze maze: list) {
-            maze.find();
+            maze.findPath();
+            maze.printResult();
         }
     }
 }

@@ -132,8 +132,10 @@ class Maze{
 //        return down || left || up || right;
 //    }
 
-    public void find() {
+    public void findPath() {
         findPath(start, end);
+    }
+    public void printResult() {
         if(!solved) System.out.println("NO PATH EXISTS");
         else print();
         System.out.println();
