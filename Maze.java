@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 //=================================================
-// YOUR NAME GOES HERE
+// Kien Trung Pham
 // Which project is this?
 // Due Date
 //
