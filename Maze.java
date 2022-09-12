@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 //=================================================
 // Kien Trung Pham
-// Which project is this?
-// Due Date
+// Maze path finding
+// Due Date 9/12/2022
 //
-// What is this file/module used for?
+// Maze class to read input and find path in maze
 //=================================================
 class Maze{
 
@@ -44,17 +44,9 @@ class Maze{
 
     // read method
     public void read(Scanner sc) {
-//        sc.nextLine();
-//        String[] size = sc.nextLine().trim().split(" ");
-//        r = Integer.parseInt(size[0]);
-//        c = Integer.parseInt(size[1]);
         r = sc.nextInt();
         c = sc.nextInt();
         maze = new char[r][c];
-
-//        String[] position = sc.nextLine().trim().split(" ");
-//        start = new Point(Integer.parseInt(position[0])-1, Integer.parseInt(position[1])-1);
-//        end = new Point(Integer.parseInt(position[2])-1, Integer.parseInt(position[3])-1);
 
         start = Point.read(sc);
         end = Point.read(sc);

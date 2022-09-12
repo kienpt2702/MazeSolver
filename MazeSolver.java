@@ -1,9 +1,9 @@
 //=================================================
-// YOUR NAME GOES HERE
-// Which project is this?
-// Due Date
+// Kien Trung Pham
+// Maze path finding
+// Due Date 9/12/2022
 //
-// What is this file/module used for?
+// Maze solver class to read total problems and make calls to Maze class to find path
 //=================================================
 
 import java.util.ArrayList;

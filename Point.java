@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 //=================================================
 // Kien Trung Pham
-// Which project is this?
-// Due Date
+// Maze path finding
+// Due Date 9/12/2022
 //
-// What is this file/module used for?
+// Point class to represent point in the maze.
 //=================================================
 class Point{
 
@@ -51,16 +51,14 @@ class Point{
         this.x = x;
     }
 
-
     // setY method
-
     public void setY(int y) {
         this.y = y;
     }
 
-
     // isEqual method
     public boolean isEqual(Point other) {
+        if(other == null) return false;
         return this.x == other.x && this.y == other.y;
     }
 
