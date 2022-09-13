@@ -102,27 +102,6 @@ class Maze{
             count = (count+25) % 26;
         }
     }
-//    public boolean findPath(Point start, Point end) {
-//        if(solved) return true;
-//        int col = start.getX();
-//        int row = start.getY();
-//
-//        if(col < 0 || col >= c || row < 0 || row >= r || maze[row][col] != '.') return false;
-//
-//        maze[row][col] = alphabet.charAt(count++ % 26);
-//        if(start.isEqual(end)) {
-//            //print();
-//            return true;
-//        }
-//        // not find yet => need to solve
-//        boolean down = findPath(new Point(col, row+1), end);
-//        boolean left = findPath(new Point(col+1, row), end);
-//        boolean up = findPath(new Point(col, row-1), end);
-//        boolean right = findPath(new Point(col-1, row), end);
-//        maze[row][col] = '.';
-//        count = (count+25) % 26;
-//        return down || left || up || right;
-//    }
 
     public void findPath() {
         findPath(start, end);
