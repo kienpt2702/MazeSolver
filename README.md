@@ -3,7 +3,7 @@ The maze can be represented as a 2D array of characters (array of strings).  Eac
 
 
 ## Input
-Program will read maze data from standard input (keyboard).  You can directly enter the input from your keyboard.  However, you can make plain text files that contains separate test maze datasets.  Open a text editor and type in the test data (see example below).  You can then "redirect standard input" from a file into your program.  Here is an example of using input redirection:
+Program will read maze data from standard input (keyboard).  User can directly enter the input from your keyboard.  However, user can make plain text files that contains separate test maze datasets.  Open a text editor and type in the test data (see example below).  User can then "redirect standard input" from a file into your program.  Here is an example of using input redirection:
 
 ```text
 prompt$ java mazeapp < test1.txt
